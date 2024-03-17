@@ -37,7 +37,7 @@ echo
 ./create-artifacts.sh
 cd ../
 sleep 2
-docker-compose up -d
+sudo docker-compose up -d
 cd ../
 sleep 5
 echo

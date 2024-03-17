@@ -2,7 +2,7 @@ echo "**************************************************************"
 echo "Removing All docker containers"
 echo "**************************************************************"
 echo
-docker rm -vf $(docker ps -aq)
+sudo docker rm -vf $(docker ps -aq)
 sleep 1
 
 cd ${PWD}/channel-artifacts/

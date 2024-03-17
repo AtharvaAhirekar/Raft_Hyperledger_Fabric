@@ -1,28 +1,28 @@
 test:
   workers:
     type: local
-    number: 1
+    number: 5
   rounds:
     - label: Create Car
-      txNumber: 200
+      txNumber: 1000
       rateControl:
         type: fixed-rate
         opts:
-          tps: 40
+          tps: 100
       workload:
         module: benchmarks/scenario/base/createCar.js
 
     - label: Query Car
-      txNumber: 300
+      txNumber: 1000
       rateControl:
         type: fixed-rate
         opts:
-          tps: 50
+          tps: 100
       workload:
         module: benchmarks/scenario/base/queryCar.js
       
     - label: Update Car
-      txNumber: 200
+      txNumber: 1000
       rateControl:
         type: fixed-rate
         opts:
@@ -32,11 +32,11 @@ test:
 
 
     - label: Transfer Car
-      txNumber: 600
+      txNumber: 1000
       rateControl:
         type: fixed-rate
         opts:
-          tps: 150
+          tps: 100
       workload:
         module: benchmarks/scenario/base/transfer.js
 
